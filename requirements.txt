@@ -4,6 +4,8 @@ importlib-metadata==4.8.3
 importlib-resources==5.4.0
 platformdirs==2.4.0
 python-dotenv==0.20.0
+pytube==12.1.0
+pytube3==9.6.4
 six==1.16.0
 typing-extensions==4.1.1
 virtualenv==20.15.1
