@@ -3,7 +3,7 @@ from yt_concate.pipeline.steps.download_captions import DownloadCaptions
 from yt_concate.pipeline.steps.step import StepException
 
 from yt_concate.pipeline.pipeline import Pipeline
-CHANNEL_ID = 'UCKSVUHI9rbbkXhvAXK-2uxA'
+CHANNEL_ID = 'UCz4tgANd4yy8Oe0iXCdSWfA'
 
 
 def main():
