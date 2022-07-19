@@ -1,7 +1,9 @@
-from yt_concate.pipeline.steps.get_video_list import GetVideoList
-from yt_concate.pipeline.steps.download_captions import DownloadCaptions
 from yt_concate.pipeline.steps.preflight import Preflight
+from yt_concate.pipeline.steps.get_video_list import GetVideoList
+from yt_concate.pipeline.steps.initialize_yt import InitializeYT
+from yt_concate.pipeline.steps.download_captions import DownloadCaptions
 from yt_concate.pipeline.steps.read_caption import ReadCaption
+from yt_concate.pipeline.steps.search import Search
 from yt_concate.pipeline.steps.postflight import Postflight
 from yt_concate.pipeline.steps.step import StepException
 
@@ -13,13 +15,16 @@ CHANNEL_ID = 'UCz4tgANd4yy8Oe0iXCdSWfA'
 
 def main():
     inputs = {
-        'channel_id': CHANNEL_ID
+        'channel_id': CHANNEL_ID,
+        'search_word': 'love',
     }
     steps = [
         Preflight(),
         GetVideoList(),
+        InitializeYT(),
         DownloadCaptions(),
         ReadCaption(),
+        Search(),
         Postflight(),
         ]
 
