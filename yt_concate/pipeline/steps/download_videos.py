@@ -17,5 +17,6 @@ class DownloadVideos(Step):
                 continue
 
             print('downloading', url)
-            YouTube(url).streams.filter(res="1080p").first().download(output_path=VIDEOS_DIR, filename=yt.id + '.mp4')
+            YouTube(url).streams.filter(progressive=True, res="720p").first().download(output_path=VIDEOS_DIR, filename=yt.id + '.mp4')
 
+        return data

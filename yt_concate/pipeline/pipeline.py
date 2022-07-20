@@ -13,3 +13,4 @@ class Pipeline:
             except StepException as e:
                 print('Exception happened:', e)
                 break
+        return data
